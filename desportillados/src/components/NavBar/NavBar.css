@@ -1,0 +1,27 @@
+.container-logo img{
+    width: 100%;
+}
+.container-logo{
+    float:left;
+    width: 150px;
+}
+header>div{
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-around;
+}
+.main-navbar{
+    background-color: white !important;
+}
+.main-navbar button{
+    color: black;
+}
+ul.navbar-list{
+    list-style: none;
+    display: flex;
+
+}
+h1{
+    color: gray;
+
+}
