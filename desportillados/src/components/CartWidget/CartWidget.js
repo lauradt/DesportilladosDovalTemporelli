@@ -1,16 +1,14 @@
 import './CartWidget.css';
-//import ShoppingCartSharpIcon from '@mui/icons-material/ShoppingCartSharp';
-//import IconButton from '@mui/material/IconButton';
-//import React from 'react';
-
-//import Button from '@material-ui/core/Button';
+import ShoppingCartSharpIcon from '@mui/icons-material/ShoppingCartSharp';
+import IconButton from '@mui/material/IconButton';
+import React from 'react';
 
 const CartWidget=()=>{
     return(
-       <p>hola</p> 
-    //     <IconButton>
-    //    <ShoppingCartSharpIcon/>
-    //    </IconButton>
+       
+        <IconButton>
+       <ShoppingCartSharpIcon/>
+       </IconButton>
     );
 }
 
