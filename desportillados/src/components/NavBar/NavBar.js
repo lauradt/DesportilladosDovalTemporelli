@@ -1,10 +1,12 @@
 import logo from '../../assets/logo.png';
 import './NavBar.css';
 //external components
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+// import CartWidget from '../CartWidget/CartWidget';
+
 
 const NavBar=()=> {
   return (
@@ -13,9 +15,7 @@ const NavBar=()=> {
               <Typography variant="h6">
                   <div className="container-logo">
                   <img src={logo} alt={'otro'}></img>
-                  
                   </div>
-                  
               </Typography>
               <div><h1>DESPORTILLADOS</h1></div>
               <ul className="navbar-list">
@@ -24,6 +24,7 @@ const NavBar=()=> {
               <li><Button color="inherit">Contacto</Button></li>
               <li><Button color="inherit">Login</Button></li>
               </ul>
+              {/* <CartWidget/> */}
           </Toolbar>
       </AppBar>
   );
