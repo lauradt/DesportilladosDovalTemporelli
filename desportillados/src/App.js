@@ -6,12 +6,15 @@ import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
+const producto = {nombre:"Puertita Roja", precio:1000, stock:15}
+
+
 function App() {
   return (
     <div className="App">
       
       <NavBar/>
-      <ItemListContainer/>
+      <ItemListContainer nombre={producto.nombre} precio={producto.precio} stock={producto.stock}/>
     </div>
   );
 }

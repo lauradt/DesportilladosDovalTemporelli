@@ -1,10 +1,16 @@
 import './ItemListContainer.css';
+//import React,{useState} from 'react';
+import ItemCount from '../ItemCount/ItemCount';
 
-const ItemListContainer=()=>{
-    return(
-        <h1>lista de productos</h1>
-    
+const ItemListContainer = (producto) => {
+    return (
+      <div className="ItemListContainer">
+        <p>Producto: <b>{producto.nombre}</b> <br />
+          Precio: <b>${producto.precio}</b><br />
+          Stock disponible: <b>{producto.stock}</b></p>
+        <ItemCount disponible={producto.stock} initial={0}/>
+      </div>
     );
-}
-
-export default ItemListContainer;
+  }
+  
+  export default ItemListContainer;
