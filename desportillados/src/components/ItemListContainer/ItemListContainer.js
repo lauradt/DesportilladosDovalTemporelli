@@ -9,6 +9,7 @@ const ItemListContainer = (props) => {
     return (
       <div className="ItemListContainer">
         <ItemList/>
+        
         {/* <Item nombre="Puertita Roja" precio="1000" stock="15" /> */}
         {/* <p>Producto: <b>{producto.nombre}</b> <br />
           Precio: <b>${producto.precio}</b><br />

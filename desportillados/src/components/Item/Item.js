@@ -2,7 +2,7 @@ import React  from 'react';
 import ItemListContainer from '../ItemListContainer/ItemListContainer';
 import ItemCount from '../ItemCount/ItemCount';
 import './Item.css';
-
+import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 const Item =(props)=>{
     const onAdd =(cantidad)=>{
         console.log(`Se agregaron ${cantidad} unidades de ${props.item.nombre} al carrito`)
@@ -18,6 +18,7 @@ const Item =(props)=>{
             <p>$ {props.item.precio}</p>
             <p> Stock: {props.item.stock}</p>
             <ItemCount stock={props.item.stock} initial={0} onAdd={onAdd}/>
+            <ItemDetailContainer/>
             </div>
         </div>
     )
