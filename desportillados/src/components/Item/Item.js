@@ -1,5 +1,4 @@
 import React  from 'react';
-import ItemListContainer from '../ItemListContainer/ItemListContainer';
 import ItemCount from '../ItemCount/ItemCount';
 import './Item.css';
 import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
