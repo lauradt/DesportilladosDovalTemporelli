@@ -3,6 +3,7 @@ import ItemDetail from '../ItemDetail/ItemDetail';
 
 const ItemDetailContainer = () => {
   const [item, setItem] = useState([]);
+  
 
   const getItem = new Promise((resolve) => {
     setTimeout(() => {
@@ -11,7 +12,7 @@ const ItemDetailContainer = () => {
         nombre: 'Puertita Amarilla',
         img: 'Amarilla.jpg',
         precio:'1000',
-        descripcion: 'puertita de madera 10 x 15 cm',
+        descripcion: 'material: madera, tamaño:10 x 15 cm',
         stock: 15
         }
 

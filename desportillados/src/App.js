@@ -1,5 +1,7 @@
-//import logo from '../src/assets/logo.png';
 import './App.css';
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import AppRouter from './AppRouter/AppRouter';
 //external components
 
 //components
@@ -11,10 +13,7 @@ const producto = {nombre:"Puertita Roja", precio:1000, stock:15}
 function App() {
   return (
     <div className="App">
-      
-      <NavBar/>
-      <ItemListContainer/>
-      
+      <AppRouter/>
     </div>
   );
 }

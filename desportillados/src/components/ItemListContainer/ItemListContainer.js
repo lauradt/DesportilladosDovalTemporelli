@@ -4,17 +4,13 @@ import ItemCount from '../ItemCount/ItemCount';
 import Item from '../Item/Item';
 import { ListItem } from '@mui/material';
 import ItemList from '../ItemList/ItemList';
+import { useParams } from 'react-router-dom';
 
 const ItemListContainer = (props) => {
+  const{catId}=useParams();
     return (
       <div className="ItemListContainer">
-        <ItemList/>
-        
-        {/* <Item nombre="Puertita Roja" precio="1000" stock="15" /> */}
-        {/* <p>Producto: <b>{producto.nombre}</b> <br />
-          Precio: <b>${producto.precio}</b><br />
-          Stock disponible: <b>{producto.stock}</b></p>
-        <ItemCount disponible={producto.stock} initial={0}/> */}
+        <ItemList categoria={catId}/>
       </div>
     );
   }

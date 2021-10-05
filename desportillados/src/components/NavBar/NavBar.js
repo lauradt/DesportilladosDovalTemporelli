@@ -6,6 +6,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import CartWidget from '../CartWidget/CartWidget';
+import { NavLink } from 'react-router-dom';
 
 
 const NavBar=()=> {
@@ -19,9 +20,8 @@ const NavBar=()=> {
               </Typography>
               <div><h1>DESPORTILLADOS</h1></div>
               <ul className="navbar-list">
-              <li><Button color="inherit">Inicio</Button></li>
-              <li><Button color="inherit">Productos</Button></li>
-              <li><Button color="inherit">Contacto</Button></li>
+              <li><NavLink to="/"><Button color="inherit">Inicio</Button></NavLink></li>
+              <li><NavLink to="/contacto"><Button color="inherit">Contacto</Button></NavLink></li>
               <li><Button color="inherit">Login</Button></li>
               </ul>
               <CartWidget/>

@@ -10,7 +10,7 @@ const Item =(props)=>{
         
         <div className="container-producto">
             <div className="container-img-producto">
-                <img src={`./assets/${props.item.img}`}/>
+                <img src={`../assets/${props.item.img}`}/>
             </div>
             <div className="container-data-producto">
             <h3>{props.item.nombre}</h3>
