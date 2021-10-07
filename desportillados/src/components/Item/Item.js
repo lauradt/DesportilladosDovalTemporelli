@@ -14,10 +14,10 @@ const Item =(props)=>{
             </div>
             <div className="container-data-producto">
             <h3>{props.item.nombre}</h3>
-            <p>$ {props.item.precio}</p>
-            <p> Stock: {props.item.stock}</p>
-            <ItemCount stock={props.item.stock} initial={0} onAdd={onAdd}/>
-            <ItemDetailContainer/>
+            {/* <p>$ {props.item.precio}</p>
+            <p> Stock: {props.item.stock}</p> */}
+            {/* <ItemCount stock={props.item.stock} initial={0} onAdd={onAdd}/> */}
+            <ItemDetailContainer item={props.item}/>
             </div>
         </div>
     )

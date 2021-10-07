@@ -1,35 +1,27 @@
 import React, {useState, useEffect } from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail';
 
-const ItemDetailContainer = () => {
+function ItemDetailContainer(props) {
   const [item, setItem] = useState([]);
   
 
   const getItem = new Promise((resolve) => {
     setTimeout(() => {
-      const mockItem = { 
-        id:'1',
-        nombre: 'Puertita Amarilla',
-        img: 'Amarilla.jpg',
-        precio:'1000',
-        descripcion: 'material: madera, tamaño:10 x 15 cm',
-        stock: 15
-        }
-
-      resolve(mockItem);
+        
+      resolve(item);
     }, 2000)
   })
 
   useEffect(() => {
-    getItem.then((data) => {
-      setItem(data);
+    getItem.then((item) => {
+      setItem(item);
     })
   }, [])
 
 
   return (
     <div className="item-detail-container">
-      <ItemDetail item={item} />
+      <ItemDetail item={props.item} />
     </div>
   );
 }
