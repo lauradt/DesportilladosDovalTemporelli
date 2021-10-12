@@ -37,15 +37,22 @@ const ItemDetail=(props)=>  {
     }
     return (
         <div className="item-detail">
-            
+            <div className="container-producto">
+             <div className="container-img-producto">
+                 <img src={`../assets/${props.item.img}`}/>
+             </div>
+             <div className="container-data-producto">
+             <h3>{props.item.nombre}</h3>
+            <p>$ {props.item.precio}</p>
+             <p> Stock: {props.item.stock}</p> 
+             {/* <ItemCount stock={props.item.stock} initial={0} onAdd={onAdd}/> */}
+         
             <h5>{props.item.descripcion}</h5>
-            <p> Stock: {props.item.stock}</p>
-            <p> Precio: ${props.item.precio}</p>
             {/* <ItemCount stock={props.item.stock} initial={0} onAdd={onAdd}/> */}
             <ItemCount onAdd={onAdd} onLess={onLess} quantity={items}/> 
             <NavLink to="/cart"><button variant="contained" className="info-details-payment-button">COMPRAR</button></NavLink>
-            
-            
+            </div>
+            </div>
         </div>
         
     )

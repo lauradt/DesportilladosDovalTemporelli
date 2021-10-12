@@ -6,6 +6,7 @@ import NotFoundPage from '../Pages/NotFoundPage';
 import ContactPage from '../Pages/ContactPage'
 import NavBar from '../components/NavBar/NavBar';
 import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from '../components/ItemDetailContainer/ItemDetailContainer';
 
 export default function AppRouter(){
     return(
@@ -16,7 +17,8 @@ export default function AppRouter(){
             <Route exact path="/" component={ItemListContainer}/>
             <Route path="/cart"component={CartWidget}/>
             <Route path="/contacto"component={ContactPage}/>
-            <Route path="/categoria/:catId"component={ItemListContainer}/>
+            <Route path="/categoria/:id"component={ItemListContainer}/>
+            <Route exact path="/item/:id" component={ItemDetailContainer} />
             <Route path="*"component={NotFoundPage}/>
                 
         </Switch>
