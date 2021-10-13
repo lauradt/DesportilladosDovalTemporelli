@@ -1,9 +1,6 @@
 import React  from 'react';
-import ItemCount from '../ItemCount/ItemCount';
 import './Item.css';
-import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardContent from '@mui/material/CardContent';
 import { Link } from 'react-router-dom';

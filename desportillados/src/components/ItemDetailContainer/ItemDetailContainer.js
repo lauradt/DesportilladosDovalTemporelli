@@ -2,6 +2,7 @@ import React, {useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { productos } from '../../data/productos';
+import LinearProgress from '@mui/material/LinearProgress';
 
 
 function ItemDetailContainer(props) {
@@ -27,7 +28,10 @@ function ItemDetailContainer(props) {
 
   return (
     <div className="item-detail-container">
-      <ItemDetail item={item} />
+      {loader ? (<h3> Obteniendo información del producto...<LinearProgress color="error"/></h3>) : (
+        <ItemDetail item={item} />)
+      }
+
     </div>
   );
 }

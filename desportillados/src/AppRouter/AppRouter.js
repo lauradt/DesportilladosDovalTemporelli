@@ -7,6 +7,7 @@ import ContactPage from '../Pages/ContactPage'
 import NavBar from '../components/NavBar/NavBar';
 import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from '../components/ItemDetailContainer/ItemDetailContainer';
+import Cart from '../components/Cart/Cart';
 
 export default function AppRouter(){
     return(
@@ -15,7 +16,7 @@ export default function AppRouter(){
         <HomePage/>
         <Switch>
             <Route exact path="/" component={ItemListContainer}/>
-            <Route path="/cart"component={CartWidget}/>
+            <Route path="/cart"component={Cart}/>
             <Route path="/contacto"component={ContactPage}/>
             <Route path="/categoria/:id"component={ItemListContainer}/>
             <Route exact path="/item/:id" component={ItemDetailContainer} />

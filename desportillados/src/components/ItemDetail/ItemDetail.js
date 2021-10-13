@@ -1,12 +1,17 @@
 
 import ItemCount from '../ItemCount/ItemCount';
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import { NavLink } from 'react-router-dom';
+import CartContext from '../../Context/CartContext';
+import { Button } from '@mui/material';
+
 const ItemDetail=(props)=>  {
 
     const [items, setItems] = useState(0)
     
-    const [disableButton, setDisableButton] = useState(true)
+    const [disabled, setDisableButton] = useState(false)
+
+    const cartData = useContext(CartContext);
 
     // const agregarProducto = () => {
     //     if (seleccion < props.stock)
@@ -24,7 +29,8 @@ const ItemDetail=(props)=>  {
     //     }
     // }
     const onAdd = ()=>{
-        items < props.item.stock && setItems(items + 1)  
+        items < props.item.stock && setItems(items + 1) 
+        setDisableButton(false); 
     }
     const onLess = ()=>{
         if (items > 1) {
@@ -34,6 +40,10 @@ const ItemDetail=(props)=>  {
                      setItems(items - 1);
                      setDisableButton(true);
                  } 
+    }
+    const addToShop = (unidades) => {
+        console.log(`Se agregaron ${unidades} unidades de ${props.item.nombre} al carrito`)
+        cartData.addItems(props.item, unidades);
     }
     return (
         <div className="item-detail">
@@ -45,12 +55,11 @@ const ItemDetail=(props)=>  {
              <h3>{props.item.nombre}</h3>
             <p>$ {props.item.precio}</p>
              <p> Stock: {props.item.stock}</p> 
-             {/* <ItemCount stock={props.item.stock} initial={0} onAdd={onAdd}/> */}
-         
             <h5>{props.item.descripcion}</h5>
-            {/* <ItemCount stock={props.item.stock} initial={0} onAdd={onAdd}/> */}
+            
             <ItemCount onAdd={onAdd} onLess={onLess} quantity={items}/> 
-            <NavLink to="/cart"><button variant="contained" className="info-details-payment-button">COMPRAR</button></NavLink>
+            <Button disabled={disabled} onClick={() => addToShop(items)} variant="contained">Agregar al carrito</Button>
+            {/* <NavLink to="/cart"><button variant="contained" className="info-details-payment-button">COMPRAR</button></NavLink> */}
             </div>
             </div>
         </div>
