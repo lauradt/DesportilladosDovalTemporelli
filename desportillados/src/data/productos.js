@@ -6,7 +6,8 @@ export const productos=[
         img: 'Amarilla.jpg',
         precio:'1000',
         descripcion: 'material: madera, tamaño:10 x 15 cm',
-        stock: 15
+        stock: 15,
+        cantidad: 0
     },
     {
         id:'2',
@@ -15,7 +16,8 @@ export const productos=[
         img: 'verde.jpg',
         precio:'1000',
         descripcion: 'material: madera, tamaño:10 x 15 cm',
-        stock: 5
+        stock: 5,
+        cantidad: 0
     },
     {
         id:'3',
@@ -24,7 +26,8 @@ export const productos=[
         img: 'violeta.jpg',
         precio:'1000',
         descripcion: 'material: madera, tamaño:10 x 15 cm',
-        stock: 8
+        stock: 8,
+        cantidad: 0
     },
     {
         id:'4',
@@ -33,7 +36,8 @@ export const productos=[
         img: 'Azul.jpeg',
         precio:'1000',
         descripcion: 'material: madera, tamaño:10 x 15 cm',
-        stock: 6
+        stock: 6,
+        cantidad: 0
     },
     {
         id:'5',
@@ -42,7 +46,8 @@ export const productos=[
         img: 'Celeste.jpg',
         precio:'1000',
         descripcion: 'material: madera, tamaño:10 x 15 cm',
-        stock: 4
+        stock: 4,
+        cantidad: 0
     },
     {
         id:'6',
@@ -51,7 +56,8 @@ export const productos=[
         img: 'Gris.jpg',
         precio:'1000',
         descripcion: 'material: madera, tamaño:10 x 15 cm',
-        stock: 8
+        stock: 8,
+        cantidad: 0
     },
     {
         id:'7',
@@ -60,7 +66,8 @@ export const productos=[
         img: 'Rosada.jpeg',
         precio:'1000',
         descripcion: 'material: madera, tamaño:10 x 15 cm',
-        stock: 7
+        stock: 7,
+        cantidad: 0
     },
     {
         id:'50',
@@ -69,7 +76,8 @@ export const productos=[
         img: 'cajaNena.jpg',
         precio:'1000',
         descripcion: 'material: madera, tamaño:10 x 15 cm',
-        stock: 20
+        stock: 20,
+        cantidad: 0
     },
     {
         id:'51',
@@ -78,7 +86,8 @@ export const productos=[
         img: 'cajaNene.jpg',
         precio:'1000',
         descripcion: 'material: madera, tamaño:10 x 15 cm',
-        stock: 20
+        stock: 20,
+        cantidad: 0
     }
 
 ];

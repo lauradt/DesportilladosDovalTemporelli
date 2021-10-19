@@ -11,11 +11,7 @@ const ItemList = (prop) => {
         <div >
                 {prop.items.map((item,index) => {
                     return (
-                        
-                        
                             <Item key={index} item={item} /> 
-                        
-                           
                     )
                 })} 
         </div>

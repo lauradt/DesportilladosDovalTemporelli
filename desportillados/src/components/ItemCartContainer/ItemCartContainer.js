@@ -1,13 +1,15 @@
 import React, { useState, useEffect, useContext } from 'react';
 import CartContext from '../../Context/CartContext';
-import ItemCart from '../ItemCart/ItemCart';
-import { Grid } from '@mui/material';
-import { Button } from '@mui/material';
-const ItemsCartContainer = () => {
-  const [items, setItems] = useState([]);
-  const cartData = useContext(CartContext)
-  useEffect(() => {
+import CartItemList from '../CartItemList/CartItemList';
+import { LinearProgress } from '@mui/material';
 
+const ItemCartContainer = () => {
+  const [items, setItems] = useState([]);
+  const [loader, setLoader] = useState(true);
+  const cartData = useContext(CartContext)
+  
+  useEffect(() => {
+    setLoader(true);
     const getItems = new Promise((resolve) => {
         resolve(cartData.items);
     })
@@ -15,35 +17,22 @@ const ItemsCartContainer = () => {
     getItems.then((data) => {
       setItems(data);
     })
-  }, [items])
+
+  getItems.then((data) => {
+    setItems(data);
+  }).finally(() => setLoader(false))
+}, [cartData.items])
 
 
-  return (
-    <div className="item-cart-container">
-      <Grid container direction="column" rowSpacing={2} columnSpacing={2} justifyContent="space-evenly" alignItems="center">
-        <h2>Terminar la compra de:</h2>
-        {
-          items.map((item, index) => {
-            return (
-                <div>
-              <Grid key={index} item xs={12}>
-                <ItemCart item={item} />
-              </Grid>
-              <Grid xs={12}>
-                  <p>     </p>
-              </Grid>
-              <Grid xs={12}>
-              <Button  variant="contained" color="inherit">Terminar Compra</Button>
-              </Grid>
-              
-              </div>
-            )
-          })
-        }
-
-      </Grid>
+return (
+  <div className="items-cart-container">
+    <div>
+      {loader ? (<h3>Cargando carrito...<LinearProgress color="primary" /></h3>) : (
+        <CartItemList items={items} />)
+      }
     </div>
-  );
+  </div>
+);
 }
 
-export default ItemsCartContainer;
+export default ItemCartContainer;

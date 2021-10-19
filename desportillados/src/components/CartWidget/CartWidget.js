@@ -10,14 +10,20 @@ import { NavLink } from 'react-router-dom';
 const CartWidget=()=>{
     const cartData = useContext(CartContext);
     return(
+      <> {cartData.cartCantTotal > 0 ?
         <NavLink to="/cart" exact activeClassName="selected">
       <IconButton color="inherit" aria-label="carrito">
-        <Badge badgeContent={cartData.cartSize} color="primary">
+        <Badge badgeContent={cartData.cartCantTotal} color="primary">
           <ShoppingCartSharpIcon />
         </Badge>
       </IconButton>
     </NavLink>
+    :
+    <></>
+  }
+    </>
     );
+    
 }
 
 export default CartWidget;

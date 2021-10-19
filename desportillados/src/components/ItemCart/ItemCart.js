@@ -18,14 +18,14 @@ const ItemCart = (prop) => {
                 <CardActionArea>
                     <img height="200px" width="auto" src={`../assets/${prop.item.img}`} />
                     <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                            Unidades de
-                        </Typography>
                         <Typography gutterBottom variant="h5" component="div">
                             {prop.item.nombre}
                         </Typography>
+                        <Typography gutterBottom variant="h5" component="div">
+                        cantidad: {prop.item.cantidad + " "} 
+                        </Typography>
                         <Typography variant="body2" color="text.secondary">
-                            $ {prop.item.precio}
+                            $ {prop.item.precio * prop.item.cantidad} 
                         </Typography>
                     </CardContent>
                 </CardActionArea>
