@@ -45,6 +45,9 @@ const ItemDetail=(props)=>  {
     const addToShop = (unidades) => {
         console.log(`Se agregaron ${unidades} unidades de ${props.item.nombre} al carrito`)
         props.item.cantidad = items;
+        cartData.isInCart(props.item.id)?
+            console.log('esta en el carrito')
+        :
         cartData.addItems(props.item);
     }
     return (
@@ -66,13 +69,9 @@ const ItemDetail=(props)=>  {
             </Grid>
                 
             <Grid xs={12}>
-                {cartData.isInCart(props.item.id) ?
-                <NavLink to="/cart" exact>
-                    <Button color="success" variant="contained">Terminar mi compra</Button>
-                    </NavLink>
-                    :
+                
                     <Button disabled={disabled} onClick={() => addToShop(items)} variant="contained">Agregar al carrito</Button>
-                    }
+            
             </Grid>
             
                     

@@ -6,6 +6,7 @@ const CartProvider = ({ children }) => {
     const [items, setItems] = useState([]);
     const [precioTotal, setPrecioTotal] = useState(0);
     const [cartCantTotal, setCartCantTotal] = useState(0);
+    const [idUltimaCompra, setIdUltimaCompra] = useState("");
 
 
 
@@ -34,7 +35,7 @@ const CartProvider = ({ children }) => {
         setCartCantTotal(cartCantTotal - itemAux.cantidad);
         setItems(aux);
     }
-    const data = { items, precioTotal, cartCantTotal, addItems, isInCart, clear, removeItem };
+    const data = { items, precioTotal, cartCantTotal, idUltimaCompra, addItems, isInCart, clear, removeItem, setIdUltimaCompra };
 
     //const data = { items, addItems, isInCart, clear, removeItem, cartSize: items.length };
     return (
