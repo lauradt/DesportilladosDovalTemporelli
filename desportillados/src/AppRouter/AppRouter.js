@@ -10,22 +10,22 @@ import ItemDetailContainer from '../components/ItemDetailContainer/ItemDetailCon
 import Cart from '../components/Cart/Cart';
 import GraciasPage from '../Pages/GraciasPage';
 
-export default function AppRouter(){
-    return(
+export default function AppRouter() {
+    return (
         <BrowserRouter>
-        <NavBar/>
-        <HomePage/>
-        <Switch>
-            <Route exact path="/" component={ItemListContainer}/>
-            <Route path="/cart"component={Cart}/>
-            <Route path="/contacto"component={ContactPage}/>
-            <Route path="/categoria/:id"component={ItemListContainer}/>
-            <Route exact path="/item/:id" component={ItemDetailContainer} />
-            <Route exact path="/gracias" component={GraciasPage} />
-            <Route path="*"component={NotFoundPage}/>
-                
-        </Switch>
-        {/* <Footer/> */}
+            <NavBar />
+            <HomePage />
+            <Switch>
+                <Route exact path="/" component={ItemListContainer} />
+                <Route path="/cart" component={Cart} />
+                <Route path="/contacto" component={ContactPage} />
+                <Route path="/categoria/:id" component={ItemListContainer} />
+                <Route exact path="/item/:id" component={ItemDetailContainer} />
+                <Route exact path="/gracias" component={GraciasPage} />
+                <Route path="*" component={NotFoundPage} />
+
+            </Switch>
+            {/* <Footer/> */}
         </BrowserRouter>
     )
 }
